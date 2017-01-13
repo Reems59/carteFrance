@@ -64,6 +64,7 @@ void draw(){
       cityList[i].drawVille();
      }
    }
+  
   minPopulationToDisplay =  (int)MyController.getController("Value").getValue();
   text("Populations supérieures à  : " + minPopulationToDisplay,20,720);
 }
@@ -72,9 +73,11 @@ void keyPressed(){
     if(key == CODED){
       if(keyCode == UP){
         minPopulationToDisplay = (int)(minPopulationToDisplay * coef);
+        MyController.getController("Value").setValue(minPopulationToDisplay);
         redraw();
       }else if(keyCode == DOWN){
         minPopulationToDisplay = (int)(minPopulationToDisplay /coef);
+        MyController.getController("Value").setValue(minPopulationToDisplay);
         redraw();
       }
     }
