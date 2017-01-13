@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<title>Tp carte de France</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles/layout.css" type="text/css">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a >TP carte de France</a></h1>
+      <h2>Visualisation de données sur une carte dynamique</h2>
+    </div>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- main content -->
+    <div id="content">
+      <!-- section 2 -->
+      <section>
+        <!-- article 1 -->
+        <article>
+		  <h3> introduction </h3>
+          <p>L'énnoncé du tp est disponible à l'adresse suivante <a href="http://thomaspietrzak.com/enseignement/NIHM/partie2.htm">TP visualisation</a>.</p>
+          <p>Nous avons eu à notre disposition les données des villes de France dans un fichier tsv suivant <a href="http://www.cs.toronto.edu/~fchevali/fanny/masterIVI/villes.tsv">villes.tsv</a>. Nous avons du représenter deux types données de la carte de façon pertinente et dynamique</p>
+		  <h3> représentation des données </h3>
+        </article>
+        <!-- / articles -->
+      </section>
+      <!-- section 2 -->
+      <section id="latest" class="last">
+        <ul>
+          <li>
+            <article class="clear">
+              <img src="images/carteFranceExemple1.png" alt="" width="600"/>
+                  <p>Sur la carte, j'ai choisi d'afficher l'altitude et la population de certains villes. Nous avons en bas un slider permettant de selectionner les villes avec une population supérieurs à un seul choisi par l'utilisateur.Dans le cas de l'image ci-dessus, nous avons affiché les villes avec une population supérieur à 25 000 habitants. </p>
+				  <p> A droite de l'écran, nous avons la légende de l'alitude moyen pour les villes représentées sur la carte. </p>
+                  <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                
+              <img src="images/carteFranceExemple2.png" alt="" width="600"/>
+                  <p>Lorsqu'on pose le curseur de la souris à l'interieur d'un cercle, le contour du cercle augmente et le cercle est rempli avec une certaine transparence pour garder l'information d'altitude des villes voisines. Il y a aussi le nom de la ville qui s'affiche. </p>
+				  <p>Dans le cas de la carte ci-dessus, l'utilisateur a aussi cliqué dans le cercle. Par cette action, il peut avoir des informations sur la ville présente en dessous du slider. </p>       
+            </article>
+          </li>
+          <li class="last">
+            <article class="clear">
+                  <h3>Choix technique</h3>
+                  <p>Pour représenter l'altitude des villes, je me suis basé sur la carte de France suivante <a href = "http://www.cartesfrance.fr/geographie/cartes-relief/carte-relief-communes.html" >ici</a> pour choisir les intervalles et les couleurs pour la visualisation. Dans notre cas, nous avions que l'altitude par ville et non par zone. J'ai du adapter les couleurs, supprimer certains intervalles qui encombraient la carte.</p>
+				  </p> Enfin, pour créer un slider, j'ai utilisé la librairie controlP5 ( <a href = "http://www.sojamo.de/libraries/controlP5/")> controlP5</a>), cela m'a facilité grandement la tache. 
+            </article>
+          </li>
+		  <li class="last">
+            <article class="clear">
+                  <h3>Instructions</h3>
+                  <p>Pour utiliser l'application, il suffit de télécharger les fichiers source à l'adresse suivante : <a href = "https://github.com/Reems59/carteFrance" > carte de france </a></p>
+				  <p>Il faudra ajouter la librairie <a href = "https://github.com/sojamo/controlp5/releases">controlP5 </a> dans un dossier libraries à la racine du dossier tpvisa1 (voir ce lien pour plus d'informations <a href = "https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library">wiki how to install a contributed library</a>)  </p> 
+            </article>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <!-- right column -->
+   
+    <!-- / content body -->
+  </div>
+</div>
+<!-- footer -->
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved by Rémi Kroll- </p>
+  </footer>
+</div>
+</body>
+</html>
